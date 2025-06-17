@@ -2,8 +2,8 @@ import os           # 운영체제 관련 기능을 제공 (디렉토리 생성,
 import glob         # 파일 경로 패턴 검색 (와일드카드 사용 가능)
 import shutil       # 파일 복사 및 이동 기능 제공
 
-# 다운로드 폴더 경로 설정
-downloads_dir = r'c:\Users\park\Downloads'
+# 현재 로그인된 사용자의 홈 디렉토리에서 Downloads 폴더 경로 자동 설정
+downloads_dir = os.path.join(os.path.expanduser('~'), 'Downloads')
 
 # 파일을 분류하여 이동시킬 대상 폴더 경로 설정
 images_dir = os.path.join(downloads_dir, 'Images')      # 이미지 파일 저장 폴더
