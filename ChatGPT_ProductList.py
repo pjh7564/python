@@ -43,7 +43,7 @@ class DatabaseHandler:
 
 
 # 디자인 파일을 로딩
-form_class = uic.loadUiType("Chap10_ProductList.ui")[0]
+form_class = uic.loadUiType("ProductList.ui")[0]
 
 class DemoForm(QMainWindow, form_class):
     def __init__(self, db_handler):
